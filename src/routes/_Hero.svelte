@@ -19,10 +19,6 @@
 </div>
 
 <style lang="scss">
-	@font-face {
-		font-family: valr;
-		src: url('assets/Valorant.ttf');
-	}
 	.build	{
 
 		width: 35vw;
@@ -109,7 +105,7 @@
 		color: #111111;
 		margin: 2vw;
 		padding: 8px 25px;
-		font-family: 'Metal Mania';
+		font-family: 'valorant';
 		background-image: url('/assets/gold-texture.jpg');
 		transition: 0.25s transform ease-in-out;
 		&:hover {
