@@ -8,7 +8,7 @@
 
 	let scrollY;
 	$: transparent = browser && scrollY <= 56 && $page.url.pathname === '/';
-	$: bgColor = transparent ? 'rgba(0,0,0,0)' : '#000a3f';
+	$: bgColor = transparent ? 'rgba(0,0,0,0)' : '#040406';
 	$: shadow = 'none';
 
 	$: display = $sidebarOpen ? 'none' : 'flex';

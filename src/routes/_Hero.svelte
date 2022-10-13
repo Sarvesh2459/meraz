@@ -5,11 +5,9 @@
 	<link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
 </svelte:head>
 <div class="hero" style="font-size: 2rem;">
-	<img class="floor" src="assets/floor.png" alt="" />	
-	<img class="logo" src="assets/new_logo.png" alt="" />
-	
+	<img class="logo" src="assets/Logo_glitch.png" alt="" />
 	<div class="container">
-		<img class="build" src="assets/new_build.png" alt="" />	
+		<img class="build" src="assets/gg.png" alt="" />	
 		<div class="days">39</div>
 	</div>
 	<div class="bottom">
@@ -19,13 +17,6 @@
 </div>
 
 <style lang="scss">
-	.build	{
-
-		width: 35vw;
-		transform: translate(-50%, -50%);
-		max-width: 100%;
-		min-height: 25%;
-	}
 	.logo{
 		position: absolute;
 		left: 25%;
@@ -48,18 +39,24 @@
 	position: absolute;
 	top: 50%;
 	left: 67%;
-	width: 50vw;
-	// transform: translate(-50%, -50%);
-
-}
+	width: 50vw; 
+	}
+	.build	{
+		width: 35vw;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 100%;
+		min-height: 25%;
+	}
 
 
 
 	.days {
 	font-family: 'Press Start 2P';
 	position: absolute;
-	top: 0%;
-	left: 16.5%;
+	top: -40%;
+	left: 15.5%;
 	font-size: 4vw;
 	transform: translate(-50%, -50%);
 	}

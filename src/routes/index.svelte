@@ -35,7 +35,7 @@
 
 <style lang="scss">
 	.full {
-		background-color: #040f47;
+		background-color: #040406;
 	}
 	section {
 		height: 100vh;
