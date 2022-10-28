@@ -41,7 +41,7 @@
 </nav>
 
 
-<img class="logoo" src="assets/Logo_glitch.png" alt="" srcset=""> 
+<img class="logoo" src="assets/glitcherr.png" alt="" srcset=""> 
 
 
 

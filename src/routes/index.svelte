@@ -191,6 +191,7 @@ body {
 // Basic Button Style
 .btn {
 	position: absolute;
+	bottom: 20%;
 	z-index: 3000;
   box-sizing: border-box;
   appearance: none;
