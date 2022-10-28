@@ -1,7 +1,6 @@
 [
 	{ "text": "Home", "href": "/" },
 	{ "text": "Events", "href": "/events" },
-	{ "text": "Contact", "href": "/contact" },
-	{ "text": "FJAKL", "href": "/contact" },
-	{ "text": "hELLO", "href": "/contact" }
+	{ "text": "Contact", "href": "/contact" }
+
 ]

@@ -5,9 +5,9 @@
 	import { faBars } from '@fortawesome/free-solid-svg-icons';
 	import { sidebarOpen } from '$lib/stores';
 	import links from '$lib/links.json';
-
+	import links2 from '$lib/links2.json';
 	let scrollY;
-	$: transparent = browser && scrollY <= 56 && $page.url.pathname === '/';
+	$: transparent =  browser && scrollY <= 56 && $page.url.pathname === '/';
 	$: bgColor = transparent ? 'rgba(0,0,0,0)' : '#040406';
 	$: shadow = 'none';
 
@@ -16,16 +16,17 @@
 
 <svelte:window bind:scrollY />
 
+
+
 <nav
 	class="app-bar"
 	style={`background-color: ${bgColor}; box-shadow: ${shadow}; display: ${display} `}
 >
+
 	<button aria-label="Menu" on:click={() => ($sidebarOpen = true)}>
 		<Fa icon={faBars} size="2x" />
 	</button>
-
-	<h1><a href="/">Meraz</a></h1>
-	<ul class="links">
+		<ul class="links">
 		{#each links as { href, text }}
 			<li>
 				<a
@@ -38,12 +39,52 @@
 		{/each}
 	</ul>
 </nav>
-<div class="nav-graphic">
+
+
+<img class="logoo" src="assets/Logo_glitch.png" alt="" srcset=""> 
+
+
+
+<nav
+	class="app-bar appbar2"
+	style={`background-color: ${bgColor}; box-shadow: ${shadow}; display: ${display} `}
+>
+
+	<button aria-label="Menu" on:click={() => ($sidebarOpen = true)}>
+		<Fa icon={faBars} size="2x" />
+	</button>
+		<ul class="links">
+		{#each links2 as { href, text }}
+			<li>
+				<a
+					{href}
+					class:active={href === '/'
+						? $page.url.pathname === href
+						: $page.url.pathname.includes(href)}>{text}</a
+				>
+			</li>
+		{/each}
+	</ul>
+</nav>
+
+
+<!-- <div class="nav-graphic">
 	<img src="/assets/nav_img.png" alt="" />
 	<hr />
-</div>
+</div> -->
 
 <style lang="scss">
+	.logoo{
+		// position: fixed;
+		margin: auto;
+		// margin-top: 20px;
+		// position: absolute;
+
+		// margin-right: 20px;
+		z-index: 20;
+		max-width: 5.6%;
+
+	}
 	@font-face {
 		font-family: valorant;
 		src: url('assets/SLANT.TTF');
@@ -83,12 +124,12 @@
 		top: 59.7px;
 		width: 250px;
 		z-index: 1000;
-		float: right;
+		float: left;
 	}
 
 	img {
 		width: 200px;
-		position: absolute;
+		position: absolute;	
 		right: 0px;
 		top: 3rem;
 		float: right;
@@ -108,6 +149,8 @@
 	h1 {
 		font-size: 2em;
 		margin: 10px;
+		position: relative;
+		padding-left: 110px;
 		font-family: 'valorant', cursive;
 		font-weight: normal;
 		letter-spacing: 1px;
@@ -118,6 +161,7 @@
 	}
 
 	.app-bar {
+
 		position: fixed;
 		z-index: 10;
 		top: 0;
@@ -142,28 +186,32 @@
 		box-shadow: var(--shadow);
 	}
 	.links {
+		margin-left: 100px;
+		padding-top: 10px;
+		padding-bottom: 20px;
 		display: none;
 		align-items: center;
 		padding-inline-start: 3px;
 		li {
 			display: inline-block;
-			margin-left: 1.7em;
+			margin-left: 3em;
 			position: relative;
 
 			a {
 				color: inherit;
-				font-size: 1.125em;
+				font-size: 1.3em;
 			}
 			a:after {
 				background: none repeat scroll 0 0 transparent;
 				bottom: 0;
 				content: '';
 				display: block;
-				height: 2px;
+				height: 6px;
+				border-radius: 4px;
 				left: 50%;
 				bottom: -10px;
 				position: absolute;
-				background: var(--primary);
+				background: #5da4e6;
 				transition: width 0.3s ease 0s, left 0.3s ease 0s;
 				width: 0;
 			}
@@ -175,7 +223,7 @@
 		}
 	}
 	.active {
-		color: goldenrod;
+		color: rgb(250, 0, 0);
 	}
 	nav > h1 {
 		flex-grow: 1;
@@ -191,5 +239,8 @@
 		nav > h1 {
 			text-align: left;
 		}
+	}
+	.appbar2{
+		margin-left: 900px;
 	}
 </style>

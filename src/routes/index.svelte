@@ -7,7 +7,27 @@
 	<title>Meraz '22</title>
 </svelte:head>
 
-<div class="full">
+
+
+<div class="section">
+
+	<!-- <h1>Meraz 22</h1> -->
+
+	<div class="video-container">
+		<div class="color-overlay"></div>
+		<video autoplay loop muted>
+			<source src="assets/bggg.mp4" type="video/mp4">
+		</video>
+	</div>
+	<img class="newmeraz" src="assets/newmeraz.png" alt="" srcset="">
+
+</div>
+<div style="height:400px;width:100%">
+</div>
+
+
+  <!-- <Hero /> -->
+<!-- <div class="full">
 <Hero />
 <section class='glimpses'>
 	<div class="title">
@@ -31,70 +51,113 @@
 	</div>
 	<iframe  src="https://www.youtube.com/embed/uOQbTb4-ejs" title="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
-</div>
+</div> -->
 
 <style lang="scss">
-	.full {
-		background-color: #040406;
-	}
-	section {
-		height: 100vh;
-		// padding-top: 75px;
-		scroll-snap-align: start;
-		scroll-padding-top: 75px;
-		margin: auto;
-		display: flex;
-		flex-direction: column;
+// 	.full {
+// 		background-color: #040406;
+// 	}
+// 	section {
+// 		height: 100vh;
+// 		// padding-top: 75px;
+// 		scroll-snap-align: start;
+// 		scroll-padding-top: 75px;
+// 		margin: auto;
+// 		display: flex;
+// 		flex-direction: column;
 
-		.title {
-			text-align: center;
-			color: transparent;
-			font-family: 'Metal Mania';
+// 		.title {
+// 			text-align: center;
+// 			color: transparent;
+// 			font-family: 'Metal Mania';
 
-			letter-spacing: 3px;
+// 			letter-spacing: 3px;
 
-			font-size: 1.3rem;
-			background-position: -5px;
-			h1,
-			a {
-				background: -webkit-linear-gradient(gold, gold, red);
-				background-clip: text;
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-			}
-			h1 {
-				font-size: 2rem;
-			}
+// 			font-size: 1.3rem;
+// 			background-position: -5px;
+// 			h1,
+// 			a {
+// 				background: -webkit-linear-gradient(gold, gold, red);
+// 				background-clip: text;
+// 				-webkit-background-clip: text;
+// 				-webkit-text-fill-color: transparent;
+// 			}
+// 			h1 {
+// 				font-size: 2rem;
+// 			}
 
-			display: flex;
-			margin: 0px 30px;
-			div {
-				display: flex;
-				flex-direction: row-reverse;
-				align-items: center;
-				flex-grow: 1;
-			}
-		}
-	}	
-iframe{
-	margin: 1% auto ;
-	width: 75vw;
-	height: 80vh;
+// 			display: flex;
+// 			margin: 0px 30px;
+// 			div {
+// 				display: flex;
+// 				flex-direction: row-reverse;
+// 				align-items: center;
+// 				flex-grow: 1;
+// 			}
+// 		}
+// 	}	
+// iframe{
+// 	margin: 1% auto ;
+// 	width: 75vw;
+// 	height: 80vh;
+// }
+// .glimpses{
+// 	height: 100vh;
+// }
+
+// @media screen and (max-width: 900px) {
+// 	iframe{
+// 		height: 30vh;
+// 		width: 90vw;
+// 		margin-top: 5vh;
+// 		margin-bottom: 0px;
+// 	}
+// 	.glimpses{
+// 		height: 70vh ;
+// 		padding : 0px;
+// 	}
+// }
+
+.newmeraz{
+	width: 50%;
+	z-index: 2;
 }
-.glimpses{
-	height: 100vh;
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-@media screen and (max-width: 900px) {
-	iframe{
-		height: 30vh;
-		width: 90vw;
-		margin-top: 5vh;
-		margin-bottom: 0px;
-	}
-	.glimpses{
-		height: 70vh ;
-		padding : 0px;
-	}
+.section h1 {
+  text-align: center;
+  font-size: 6rem;
+  font-family: "Cookie";
+  padding: 20px;
+  margin: 15px;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.7;
 }
 </style>

@@ -36,7 +36,7 @@
 	}
 
 	#sidebar {
-		color: var(--primary);
+		color: white;
 		position: absolute;
 		background: #121212;
 		width: 65vw;
