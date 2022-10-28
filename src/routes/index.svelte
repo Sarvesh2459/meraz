@@ -15,7 +15,7 @@
 
 	<div class="video-container">
 		<div class="color-overlay"></div>
-		<video autoplay loop muted>
+		<video  autoplay loop muted>
 			<source src="assets/bggg.mp4" type="video/mp4">
 		</video>
 	</div>
@@ -192,7 +192,7 @@ body {
 .btn {
 	position: absolute;
 	bottom: 20%;
-	z-index: 3000;
+	z-index: 3;
   box-sizing: border-box;
   appearance: none;
   background-color: transparent;
