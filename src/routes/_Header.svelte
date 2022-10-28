@@ -50,9 +50,7 @@
 	style={`background-color: ${bgColor}; box-shadow: ${shadow}; display: ${display} `}
 >
 
-	<button aria-label="Menu" on:click={() => ($sidebarOpen = true)}>
-		<Fa icon={faBars} size="2x" />
-	</button>
+	
 		<ul class="links">
 		{#each links2 as { href, text }}
 			<li>
@@ -64,6 +62,7 @@
 				>
 			</li>
 		{/each}
+		<button class="btn third"> Register</button>
 	</ul>
 </nav>
 
@@ -75,14 +74,14 @@
 
 <style lang="scss">
 	.logoo{
-		// position: fixed;
-		margin: auto;
+		position: fixed;
+		// margin: auto;
 		// margin-top: 20px;
 		// position: absolute;
-
-		// margin-right: 20px;
+		margin-top: -3%;
+		margin-right: 50%;
 		z-index: 20;
-		max-width: 5.6%;
+		max-width: 8%;
 
 	}
 	@font-face {
@@ -241,6 +240,81 @@
 		}
 	}
 	.appbar2{
-		margin-left: 900px;
+		margin-left: 50%;
 	}
+
+
+
+	
+// Reset and Layout Styles
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #2c3e50;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+
+
+ 
+
+
+// Basic Button Style
+.btn {
+	// float: right;
+	right: 0;
+	position: absolute;
+	z-index: 3000;
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid red;
+  border-radius: 0.6em;
+  color: red;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    outline: 0;
+  }
+}
+
+
+
+
+//BUTTON 3
+.third {
+  border-color: #3498db;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  transition: all 150ms ease-in-out;
+  
+  &:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  }
+}
+
 </style>
