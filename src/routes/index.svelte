@@ -119,7 +119,7 @@
 // }
 
 .newmeraz{
-	width: 50%;
+	width: 80%;
 	z-index: 2;
 }
 
@@ -142,6 +142,8 @@
   z-index: 1;
   opacity: 0.7;
 }
+
+
 
 .video-container {
   position: absolute;

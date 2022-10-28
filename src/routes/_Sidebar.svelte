@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import { sidebarOpen } from '$lib/stores';
 	import links from '$lib/links.json';
+	import links2 from '$lib/links2.json';
 </script>
 
 <div
@@ -19,6 +20,14 @@
 					>
 				</li>
 			{/each}
+
+			{#each links2 as { href, text }}
+				<li>
+					<a {href} class:active={href === '/' ? $page.url.pathname === href : $page.url.pathname.includes(href)}
+						>{text}</a
+					>
+				</li>
+			{/each}
 		</ul>
 	</nav>
 </div>
@@ -27,7 +36,7 @@
 	.wrapper {
 		position: fixed;
 		width: 100%;
-		z-index: 5;
+		z-index: 40;
 		left: -100vw;
 		top: 0;
 		width: 100%;
@@ -36,6 +45,7 @@
 	}
 
 	#sidebar {
+		z-index: 40;
 		color: white;
 		position: absolute;
 		background: #121212;

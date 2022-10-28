@@ -7,8 +7,8 @@
 	import links from '$lib/links.json';
 	import links2 from '$lib/links2.json';
 	let scrollY;
-	$: transparent =  browser && scrollY <= 56 && $page.url.pathname === '/';
-	$: bgColor = transparent ? 'rgba(0,0,0,0)' : '#040406';
+	$: transparent =  false;
+	$: bgColor = transparent ? 'rgba(0,0,0,0)' : '#1F1D36';
 	$: shadow = 'none';
 
 	$: display = $sidebarOpen ? 'none' : 'flex';
@@ -61,7 +61,7 @@
 				>
 			</li>
 		{/each}
-		<button class="btn third"> Register</button>
+		<!-- <button class="btn third"> Register</button> -->
 	</ul>
 </nav>
 
@@ -77,10 +77,11 @@
 		// margin: auto;
 		// margin-top: 20px;
 		// position: absolute;
-		margin-top: -3%;
+		margin-top: -2%;
 		margin-right: 50%;
 		z-index: 20;
-		max-width: 8%;
+		max-width: 6%;
+		max-height: 12%;
 
 	}
 	@font-face {
@@ -139,6 +140,11 @@
 			position: relative;
 			left: -10px;
 		}
+		.logoo{
+			max-width: 20%;
+			top: 20px;
+			left: 40%;
+		}
 	}
 	// .nav-graphic {
 	// 	display: none;
@@ -159,7 +165,10 @@
 	}
 
 	.app-bar {
-
+		margin-top: 15px;
+		margin-left: 20px;
+		margin-right: 20px;
+		border-radius: 10px;
 		position: fixed;
 		z-index: 10;
 		top: 0;
@@ -185,7 +194,7 @@
 	}
 	.links {
 		margin-left: 100px;
-		padding-top: 10px;
+		padding-top: 20px;
 		padding-bottom: 20px;
 		display: none;
 		align-items: center;
@@ -227,7 +236,14 @@
 		flex-grow: 1;
 		text-align: center;
 	}
-	@media screen and (min-width: 900px) {
+	@media (min-width: 900px) {
+		.app-bar{
+			opacity: 0;
+		}
+		.appbar2{
+			opacity: 0;
+		}
+
 		.links {
 			display: flex;
 		}
