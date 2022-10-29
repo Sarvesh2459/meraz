@@ -6,7 +6,7 @@
 <svelte:head>
 	<title>Contact | Meraz '22</title>
 </svelte:head>
-
+<div class="styler"></div>
 <div class="parent" style="background:rgb(66, 66, 66,40%);	border-radius: 12px;">
 	<iframe
 		title="IIT Bhilai Map"
@@ -67,6 +67,10 @@
 </div>
 
 <style lang="scss">
+	.styler{
+		height: 50px;
+
+	}
 	.parent {
 		scroll-snap-align: start;
 		scroll-margin-top: 75px;

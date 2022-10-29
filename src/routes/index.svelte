@@ -8,7 +8,6 @@
 </svelte:head>
 
 
-
 <div class="section">
 
 	<!-- <h1>Meraz 22</h1> -->
@@ -22,10 +21,15 @@
 	<img style="display: inline-block" class="newmeraz" src="assets/newmeraz.png" alt="" srcset="">
 	<button class="btn third">Register</button>
 </div>
-<div style="height:400px;width:100%">
+
+<div class="section1">
+    
 </div>
-
-
+<div style="height:200px">
+  <video  autoplay loop muted>
+    <source src="assets/bggg.mp4" type="video/mp4">
+  </video>
+</div>
   <!-- <Hero /> -->
 <!-- <div class="full">
 <Hero />
@@ -237,7 +241,18 @@ body {
   }
 }
 
-
+.section1{
+  position: relative;
+  width: 100%;
+  height: 130vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+  background-image: url("assets/bg3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 
 </style>

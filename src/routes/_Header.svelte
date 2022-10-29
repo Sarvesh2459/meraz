@@ -54,8 +54,10 @@
 		<!-- <button class="btn third"> Register</button> -->
 		</div>
 </nav>
+<a href="/">
+	<img class="logoo" src="/assets/glitcherr.png" alt="" srcset=""/> 
 
-<img class="logoo" src="/assets/glitcherr.png" alt="" srcset=""/> 
+</a>
 
 
 <!-- <div class="nav-graphic">
@@ -76,7 +78,7 @@
 		z-index: 20;
 		max-width: 6%;
 		max-height: auto;
-
+		transition: transform .2s;
 	}
 	@font-face {
 		font-family: valorant;
@@ -153,6 +155,7 @@
 	}
 
 	.app-bar {
+		// margin-bottom: 30px;
 		margin-top: 15px;
 		margin-left: 20px;
 		margin-right: 20px;
@@ -269,29 +272,13 @@
 }
 
 	
-// Reset and Layout Styles
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background: #2c3e50;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-}
-	
-body {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-}
+.logoo:hover{
+	transform: scale(1.2);}
 
 
 
 
-a:hover { text-shadow: 0 0 5px white; }
+a:hover { text-shadow: 0 0 20px white; }
 
 
  
