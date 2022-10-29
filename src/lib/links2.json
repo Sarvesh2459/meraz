@@ -1,7 +1,7 @@
 [
-	{ "text": "FJAKL", "href": "/contact" },
-	{ "text": "hELLO", "href": "/contact" },
-	{ "text": "hELLO", "href": "/contact" }
+	{ "text": "About", "href": "/about" },
+	{ "text": "Contact", "href": "/contact" },
+	{ "text": "Register", "href": "/contact" }
 
 ]
 

@@ -10,9 +10,11 @@
 	class="wrapper"
 	class:open={$sidebarOpen}
 	on:click={() => ($sidebarOpen = false)}
->
+> 
+
 	<nav class="app-bar sidebar" class:open={$sidebarOpen} id="sidebar">
 		<ul class="links">
+			<img class="logoo" src="/assets/glitcherr.png" alt="" srcset=""/>
 			{#each links as { href, text }}
 				<li>
 					<a {href} class:active={href === '/' ? $page.url.pathname === href : $page.url.pathname.includes(href)}
@@ -33,6 +35,11 @@
 </div>
 
 <style lang="scss">
+	.logoo{
+		max-width: 80px;
+		margin-top: 10%;
+		// max-height: 80%;
+	}
 	.wrapper {
 		position: fixed;
 		width: 100%;
@@ -49,13 +56,13 @@
 		color: white;
 		position: absolute;
 		background: #121212;
-		width: 65vw;
+		width: 50vw;
 		height: 100%;
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
 	}
 	#sidebar ul {
-		margin: 0;
+		margin: 50px;
 		padding: 0;
 		list-style: none;
 	}
@@ -89,4 +96,6 @@
 	.active {
 		font-weight: bold;
 	}
+	a:hover { text-shadow: 0 0 5px white; }
+
 </style>

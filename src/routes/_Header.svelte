@@ -18,52 +18,44 @@
 
 
 
-<nav
-	class="app-bar"
-	style={`background-color: ${bgColor}; box-shadow: ${shadow}; display: ${display} `}
->
 
-	<button aria-label="Menu" on:click={() => ($sidebarOpen = true)}>
-		<Fa icon={faBars} size="2x" />
-	</button>
-		<ul class="links">
-		{#each links as { href, text }}
-			<li>
-				<a
-					{href}
-					class:active={href === '/'
-						? $page.url.pathname === href
-						: $page.url.pathname.includes(href)}>{text}</a
-				>
-			</li>
-		{/each}
-	</ul>
-</nav>
-
-
-<img class="logoo" src="/assets/glitcherr.png" alt="" srcset=""/> 
-
+<button aria-label="Menu" on:click={() => ($sidebarOpen = true)}>
+	<Fa icon={faBars} size="2x" />
+</button>
 
 <nav
 	class="app-bar appbar2"
 	style={`background-color: ${bgColor}; box-shadow: ${shadow}; display: ${display} `}
 >
 
-	
-		<ul class="links">
-		{#each links2 as { href, text }}
-			<li>
-				<a
-					{href}
-					class:active={href === '/'
-						? $page.url.pathname === href
-						: $page.url.pathname.includes(href)}>{text}</a
-				>
+
+		<div class="links">
+
+			<li class="part1"> 
+				<a href="/" >Home </a>
 			</li>
-		{/each}
+			<li class="part2"> 
+				<a href="/events">Events </a>
+			</li>
+			<li class="part3"> 
+				<a href="/contact">Accomodation </a>
+			</li>
+
+			<li class="part4"> 
+				<a href="/contact">About</a>
+			</li>
+			<li class="part5"> 
+				<a href="/contact">Contact </a>
+			</li>
+			<li class="part6"> 
+				<a href="/contact">Register </a>
+			</li>
+
 		<!-- <button class="btn third"> Register</button> -->
-	</ul>
+		</div>
 </nav>
+
+<img class="logoo" src="/assets/glitcherr.png" alt="" srcset=""/> 
 
 
 <!-- <div class="nav-graphic">
@@ -72,16 +64,18 @@
 </div> -->
 
 <style lang="scss">
+
+	
 	.logoo{
 		position: fixed;
 		// margin: auto;
 		// margin-top: 20px;
 		// position: absolute;
-		margin-top: -2%;
-		margin-right: 50%;
+		margin-top: -3%;
+		margin-right: 47%;
 		z-index: 20;
 		max-width: 6%;
-		max-height: 12%;
+		max-height: auto;
 
 	}
 	@font-face {
@@ -90,6 +84,10 @@
 	}
 
 	button {
+		position: absolute;
+		z-index: 20;
+		margin-top: 2%;
+		margin-left: 2%;
 		background: none;
 		border: none;
 		color: currentColor;
@@ -135,17 +133,7 @@
 		z-index: 1500;
 	}
 
-	@media (max-width: 900px) {
-		h1 {
-			position: relative;
-			left: -10px;
-		}
-		.logoo{
-			max-width: 20%;
-			top: 20px;
-			left: 40%;
-		}
-	}
+
 	// .nav-graphic {
 	// 	display: none;
 	// }
@@ -193,16 +181,16 @@
 		box-shadow: var(--shadow);
 	}
 	.links {
-		margin-left: 100px;
-		padding-top: 20px;
-		padding-bottom: 20px;
+		// margin-left: 100px;
+		padding-top: 25px;
+		padding-bottom: 25px;
 		display: none;
 		align-items: center;
 		padding-inline-start: 3px;
 		li {
 			display: inline-block;
-			margin-left: 3em;
-			position: relative;
+			// margin-left: 3em;
+			position: absolute;
 
 			a {
 				color: inherit;
@@ -257,11 +245,28 @@
 			text-align: left;
 		}
 	}
-	.appbar2{
-		margin-left: 50%;
-	}
 
 
+.part1{
+	margin-left: 2%;
+}
+
+
+.part2{
+	margin-left: 15%;
+}
+.part3{
+	margin-left: 29%;
+}
+.part4{
+	margin-left: 60%;
+}
+.part5{
+	margin-left: 76%;
+}
+.part6{
+	margin-left: 90%;
+}
 
 	
 // Reset and Layout Styles
@@ -283,6 +288,10 @@ body {
   align-content: center;
 }
 
+
+
+
+a:hover { text-shadow: 0 0 5px white; }
 
 
  
@@ -335,5 +344,23 @@ body {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
   }
 }
+
+
+@media (max-width: 900px) {
+		h1 {
+			position: relative;
+			left: -10px;
+		}
+		.logoo{
+			max-width: 20%;
+			max-height: 40%;
+			top: 20px;
+			left: 40%;
+		}
+
+		.links{
+			opacity: 0;
+		}
+	}
 
 </style>
