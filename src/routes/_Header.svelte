@@ -237,13 +237,16 @@
 		text-align: center;
 	}
 	@media (min-width: 900px) {
+		
 		.app-bar{
-			opacity: 0;
+			opacity: 1	;
 		}
 		.appbar2{
-			opacity: 0;
+			opacity: 1;
 		}
-
+		.nav{
+			background-color: black;
+		}
 		.links {
 			display: flex;
 		}
@@ -271,6 +274,7 @@ html, body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
 }
+	
 body {
   display: flex;
   flex-wrap: wrap;
