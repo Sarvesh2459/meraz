@@ -7,7 +7,7 @@
 	<title>Meraz '22</title>
 </svelte:head>
 
-
+<div style="background-color:white">
 <div class="section">
 
 	<!-- <h1>Meraz 22</h1> -->
@@ -22,6 +22,7 @@
 	<button class="btn third">Register</button>
 </div>
 
+<<<<<<< HEAD
 <!-- <div class="section1">
     
 </div>
@@ -30,6 +31,39 @@
     <source src="assets/bggg.mp4" type="video/mp4">
   </video>
 </div> -->
+=======
+<div class="section1">
+    <video  class="video" autoplay loop muted>
+      <source src="assets/LostStories.mp4" type="video/mp4">
+    </video>    
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+    </p>
+</div>
+<div class="section2">
+  <video  class="video1" autoplay loop muted>
+    <source src="assets/Neophilis.mp4" type="video/mp4">
+  </video> 
+  <p class="text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+  </p>   
+</div>
+<div class="section3">
+  <video  class="video2" autoplay loop muted>
+    <source src="assets/vipul.mp4" type="video/mp4">
+  </video> 
+  <p class="text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+  </p>   
+</div>
+</div>
+>>>>>>> ca0d75615de344e01395dfe06cced7c0a6986dbe
   <!-- <Hero /> -->
 <!-- <div class="full">
 <Hero />
@@ -58,6 +92,54 @@
 </div> -->
 
 <style lang="scss">
+  .video{
+    position:absolute;
+    width:620px;
+    height:100%;
+    left:5%;
+
+  }
+  .video1{
+    position:absolute;
+    width:620px;
+    height:100%;
+    right:5%  ;
+  }
+  .video2{
+    position:absolute;
+    width:620px;
+    height:100%;
+    left:5%;
+  }
+  .text{
+    position: absolute;
+    color: white;
+    top:250px;
+    right:0px;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+  }
+  .text1{
+    position: absolute;
+    color: black;
+    top:100px;
+    left:0px;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+  }
+  .text2{
+    position: absolute;
+    color: white;
+    top:250px;
+    right:0px;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+  }
+  
+
 // 	.full {
 // 		background-color: #040406;
 // 	}
@@ -253,6 +335,72 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
-
+.section2{
+  position: relative;
+  top:-80px;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.section3{
+  position: relative;
+  top: -50px;
+  width: 100%;
+  height: 130vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible; 
+  background-image: url("assets/bg3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (max-width: 900px) {
+		.video{
+			width: 100%;
+		}
+		.video1{
+			width:100%;
+		}
+		.video2{
+			width:100%;
+		}
+    .text{
+    position: absolute;
+    color: white;
+    top:250px;
+    right:0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+  }
+  .text1{
+    position: absolute;
+    color: black;
+    top:100px;
+    left:0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+  }
+  .text2{
+    position: absolute;
+    color: white;
+    top:250px;
+    right:0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+  }
+	}
 
 </style>
