@@ -56,7 +56,7 @@
 		color: white;
 		position: absolute;
 		background: #121212;
-		width: 50vw;
+		width: 75vw;
 		height: 100%;
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
@@ -71,7 +71,7 @@
 		margin: 0;
 	}
 	#sidebar.open {
-		left: 0px;
+		right: 0px;
 	}
 	.wrapper.open {
 		left: 0px;

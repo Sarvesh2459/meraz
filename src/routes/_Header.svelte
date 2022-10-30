@@ -8,7 +8,7 @@
 	import links2 from '$lib/links2.json';
 	let scrollY;
 	$: transparent =  false;
-	$: bgColor = transparent ? 'rgba(0,0,0,0)' : '#1F1D36';
+	$: bgColor = transparent ? 'rgba(0,0,0,0)' : 'white';
 	$: shadow = 'none';
 
 	$: display = $sidebarOpen ? 'none' : 'flex';
@@ -54,10 +54,15 @@
 		<!-- <button class="btn third"> Register</button> -->
 		</div>
 </nav>
-<a href="/">
-	<img class="logoo" src="/assets/glitcherr.png" alt="" srcset=""/> 
+<div class="box">
 
-</a>
+	<a href="/">
+		<img class="logoo" src="/assets/glitcherr.png" alt="" srcset=""/> 
+	
+	</a>
+	
+
+</div>
 
 
 <!-- <div class="nav-graphic">
@@ -66,13 +71,20 @@
 </div> -->
 
 <style lang="scss">
-
+	.box{
+		z-index: 20;
+		width: 10%;
+		height: 10%;
+		background-color: black;
+	}
 	
 	.logoo{
 		position: fixed;
 		// margin: auto;
 		// margin-top: 20px;
 		// position: absolute;
+		// border-color: black;
+		border-radius: 5%;
 		margin-top: -3%;
 		margin-right: 47%;
 		z-index: 20;
@@ -88,8 +100,8 @@
 	button {
 		position: absolute;
 		z-index: 20;
-		margin-top: 2%;
-		margin-left: 2%;
+		margin-top: 5%;
+		margin-left: 85%;
 		background: none;
 		border: none;
 		color: currentColor;
@@ -97,7 +109,7 @@
 	li {
 		// background-image: url('/assets/gold-texture.jpg');
 		font-family: 'valorant', cursive;
-		background-color: white;
+		background-color: black;
 		font-size: 1.1em;
 		letter-spacing: 1px;
 		font-weight: regular;
@@ -278,7 +290,7 @@
 
 
 
-a:hover { text-shadow: 0 0 20px white; }
+a:hover,a:focus { text-shadow: 0 0 20px blue; }
 
 
  
@@ -341,6 +353,7 @@ a:hover { text-shadow: 0 0 20px white; }
 		.logoo{
 			max-width: 20%;
 			max-height: 40%;
+			position: absolute;
 			top: 20px;
 			left: 40%;
 		}

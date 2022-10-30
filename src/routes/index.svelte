@@ -22,14 +22,14 @@
 	<button class="btn third">Register</button>
 </div>
 
-<div class="section1">
+<!-- <div class="section1">
     
 </div>
 <div style="height:200px">
   <video  autoplay loop muted>
     <source src="assets/bggg.mp4" type="video/mp4">
   </video>
-</div>
+</div> -->
   <!-- <Hero /> -->
 <!-- <div class="full">
 <Hero />
